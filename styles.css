@@ -1,0 +1,107 @@
+/* Basic reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa; /* Light grey background for overall page */
+    color: #333; /* Dark grey text for better readability */
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(145deg, #f57c00, #ff9800); /* Gradient from dark orange to light orange */
+    color: #ffffff;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* More prominent shadow for depth */
+}
+
+header img {
+    height: 50px; /* Fixed height for logo */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    padding: 0 20px; /* Horizontal padding between navigation items */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White text to stand out against the background */
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+header nav ul li a:hover {
+    color: #ffd54f; /* Light yellow on hover for contrast */
+}
+
+/* Hero section styling */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background: #ffffff; /* Solid white background for contrast */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    margin: 20px auto; /* Centered with vertical and horizontal spacing */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Stronger shadow for a pop-out effect */
+    width: 90%; /* Making hero section take most of the screen width */
+}
+
+.hero img {
+    max-width: 50%;
+    border-radius: 10px; /* Consistent rounded corners for images */
+}
+
+/* Button styling */
+.button-link, button {
+    padding: 10px 20px;
+    background-color: #0078D7; /* Button background color */
+    color: white; /* Button text color */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Button text size */
+    cursor: pointer; /* Cursor appears as pointer to indicate it's clickable */
+    display: inline-block;
+    border: none;
+    transition: background-color 0.3s; /* Smooth background transition on hover */
+}
+
+.button-link:hover, button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Product List Styling */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-item {
+    width: 100%; /* Adjust based on screen size */
+    max-width: 300px; /* Maximum width */
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Footer styling */
+footer {
+    background: linear-gradient(145deg, #ef6c00, #f57c00); /* Similar gradient as header but reversed */
+    padding: 20px;
+    text-align: center;
+    color: #ffffff; /* White text for visibility */
+}
