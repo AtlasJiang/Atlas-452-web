@@ -4,7 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- 假设styles.css包含其他样式 -->
+    <style>
+        /* 通用样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .product-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .product-item {
+            flex: 1;
+            min-width: 250px;
+            box-sizing: border-box;
+            text-align: center;
+            margin: 10px;
+            position: relative; /* 添加定位以便放置箭头 */
+        }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product-item p {
+            margin-top: 10px;
+        }
+ 
+        /* 箭头样式 */
+        .product-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -30px; /* 根据需要调整箭头的位置 */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 30px solid #000; /* 箭头颜色和宽度 */
+            border-top: 15px solid transparent; /* 箭头顶部透明 */
+            border-bottom: 15px solid transparent; /* 箭头底部透明 */
+        }
+ 
+        /* 可选：调整箭头颜色或样式 */
+        /* .product-item:not(:last-child)::after {
+            border-left-color: #ff0000; /* 例如，将箭头颜色改为红色 */
+        } */
+ 
+        /* 响应式设计调整（可选） */
+        @media (max-width: 768px) {
+            .product-item {
+                min-width: 100%;
+                margin: 10px 0;
+            }
+            .product-item:not(:last-child)::after {
+                display: none; /* 在小屏幕上隐藏箭头 */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -27,6 +86,22 @@
             <li><a href="FAQ.html">FAQs</a></li>
             <li><a href="contact.html">Contact Support</a></li>
         </ul>
+        <!-- 品字形布局开始 -->
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="pc1.jpg" alt="PC 1">
+                <p>On site installation of software and hardware</p>
+            </div>
+            <div class="product-item">
+                <img src="pc2.jpg" alt="PC 2">
+                <p>One on one manual customer service</p>
+            </div>
+            <div class="product-item">
+                <img src="pc3.jpg" alt="PC 3">
+                <p>Remote assistance</p>
+            </div>
+        </div>
+        <!-- 品字形布局结束 -->
     </main>
     <footer>
         <p>32 Smith Street, Sunnyvale, NSW 2030 Australia</p>
