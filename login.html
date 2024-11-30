@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .button {
+            background-color: #4CAF50; /* Green background */
+            border: none; /* Remove border */
+            color: white; /* White text */
+            padding: 15px 32px; /* Padding */
+            text-align: center; /* Centered text */
+            text-decoration: none; /* No underline */
+            display: inline-block; /* Inline-block display */
+            font-size: 16px; /* Font size */
+            margin: 4px 2px; /* Margin */
+            cursor: pointer; /* Hand cursor on hover */
+        }
+    </style>
+</head>
+<script src="script.js" defer></script>
+
+<body>
+
+<!-- Navigation bar -->
+<nav class="nav-bar">
+    <div class="logo">
+        <img src="logo.jpg" alt="Site Logo">
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
+        <li><a href="projects.html">Projects</a></li>
+    </ul>
+</nav>
+
+<!-- Page name -->
+<div class="page-name">
+    <h1>Login to BigNew</h1>
+</div>
+
+<!-- Login Form -->
+<section class="login-form">
+    <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <!-- Add class="button" to the Login button for styling -->
+        <button type="submit" class="button">Login</button>
+    </form>
+    <!-- Add class="button" to the Register and Back to Homepage buttons for styling -->
+    <button onclick="window.location.href='register.html'" class="button">Register</button>
+    <button onclick="window.location.href='index.html'" class="button">Back to Homepage</button>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2024 Atlas.</p>
+</footer>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // 获取存储的用户列表
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+
+        // 检查用户名和密码是否匹配
+        const user = users.find(u => u.email === email && u.password === password);
+
+        if (user) {
+            localStorage.setItem('isLoggedIn', 'true');
+            alert('Login successful. Redirecting to shop...');
+            window.location.href = 'shop.html';
+        } else {
+            alert('Invalid email or password. Please try again.');
+        }
+    });
+</script>
+
+</body>
+</html>

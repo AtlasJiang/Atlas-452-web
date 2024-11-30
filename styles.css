@@ -1,107 +1,213 @@
-/* Basic reset */
-body, html {
+/* Atlas */  
+body {  
+    margin-bottom: 100px; /* Ensure adequate space is available for the footer */  
+}  
+  
+.nav-bar {    
+    background-color: #FFC0CB; /* 修改为粉色背景 */  
+    padding: 10px 0; /* Padding for the top and bottom of the navigation bar */    
+}    
+    
+.nav-bar ul {    
+    list-style-type: none;    
+    text-align: center;    
+}    
+    
+.nav-bar ul li {    
+    display: inline;    
+    margin: 0 20px;    
+}    
+   
+.footer {    
+    background-color: rgba(255, 192, 203, 0.8); /* 带有80%透明度的浅粉色页脚 */  
+    padding: 10px 0;    
+    text-align: center;    
+    position: fixed;    
+    width: 100%;    
+    bottom: 0;    
+}
+  
+/* Image Styles */  
+.image-section img,  
+.project img,  
+.image-section-about img,  
+.image-section-home img {  
+    display: block;  
+    margin: 0 auto; /* Center the images horizontally */  
+}  
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+}
+ 
+.logo {
+    flex-shrink: 0;
+}
+ 
+.logo img {
+    height: 1em; /* Adjust this if your text size is different */
+    width: auto;
+    margin-right: 15px;
+}
+ 
+.nav-bar ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #fafafa; /* Light grey background for overall page */
-    color: #333; /* Dark grey text for better readability */
-}
-
-/* Header styling */
-header {
-    background: linear-gradient(145deg, #f57c00, #ff9800); /* Gradient from dark orange to light orange */
-    color: #ffffff;
-    padding: 10px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* More prominent shadow for depth */
-}
-
-header img {
-    height: 50px; /* Fixed height for logo */
-}
-
-header nav ul {
-    list-style: none;
     display: flex;
 }
-
-header nav ul li {
-    padding: 0 20px; /* Horizontal padding between navigation items */
+ 
+.nav-bar ul li {
+    margin: 0 10px;
 }
-
-header nav ul li a {
+ 
+.nav-bar ul li a {
+    color: white;
     text-decoration: none;
-    color: #ffffff; /* White text to stand out against the background */
-    font-weight: bold;
-    transition: color 0.3s; /* Smooth transition for hover effect */
+    padding: 8px 16px;
+    display: block;
 }
-
-header nav ul li a:hover {
-    color: #ffd54f; /* Light yellow on hover for contrast */
+ 
+.nav-bar ul li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
 }
+/* Button Styles */  
+.course button,  
+.registration-form input[type="button"],  
+.registration-form input[type="submit"] {  
+    background-color: rgb(0, 255, 8);  
+    color: white;  
+    border: none;  
+    padding: 5px 10px;  
+    margin: 5px;  
+    cursor: pointer;  
+}  
+  
+/* Page-specific Styles */  
+.page-name,  
+.image-section,  
+.registration-form {  
+    text-align: center; /* Center aligning the content within these sections */  
+}  
+  
+/* Course Section Styles */  
 
-/* Hero section styling */
-.hero {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    background: #ffffff; /* Solid white background for contrast */
-    border-radius: 10px; /* Rounded corners for a softer look */
-    margin: 20px auto; /* Centered with vertical and horizontal spacing */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Stronger shadow for a pop-out effect */
-    width: 90%; /* Making hero section take most of the screen width */
+.course-section {  
+    /* styles.css */  
+    .course {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 250px; /* 或使用max-width */
+        margin: 10px;
+    }
+    
+    .course input[type="text"] {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .course-section {  
+  
+        /* If using a floating layout, make sure to clear the floating */  
+        overflow: auto; /* or use other methods to clear float */  
+      
+    }  
+    .course-section {
+        display: flex;
+        flex-wrap: wrap; /* 允许子元素在必要时换行 */
+        justify-content: center; /* 水平居中子元素 */
+        /* 可以添加一些额外的样式来控制间距等 */
+        gap: 20px; /* 子元素之间的间距，可以根据需要调整 */
+        padding: 20px; /* 容器内部的填充，可以根据需要调整 */
+    }
+     
+    /* .course元素的样式，可以根据需要进一步定制 */
+    .course {
+        /* 这里的宽度是可选的，如果您希望课程块有固定的宽度，则设置它 */
+        /* width: 200px; */
+        /* 其他样式，如背景色、边框、内边距等，可以在此处添加 */
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    } 
+    .course {  
+      
+        margin-bottom: 20px; /* Add some vertical spacing for each course */  
+      
+        /* You can add other styles to beautify the course layout */  
+      
+    }  
+      
+    /* If you use a floating layout, ensure that the .course element is floating */  
+    .course {  
+      
+        float: left; /* or use other layout methods, such as flex */  
+      
+        width: 100%; /* If floating is not used, this attribute is not needed */  
+      
+    }  
+      
+    /* Clear the style of the floating button (if needed) */  
+    .remove-course {  
+      
+        clear: both; /* Ensure that the button does not float next to the course content */  
+      
+        display: block; /* Ensure that the button is displayed as a block level element */  
+      
+        margin-top: 10px; /* Add some top margins */  
+      
+    }  
+      
+    /* Other styles you need */
+}  
+  
+/* Project Section Styles */  
+/* Project Section Styles */  
+.project-section {    
+    display: grid;    
+    grid-template-columns: repeat(2, 1fr); /* Define two columns */    
+    grid-gap: 10px; /* Spacing between items */    
+    align-items: start; /* Vertical alignment, can be adjusted based on need */    
+}    
+    
+.project:first-child {    
+    grid-row: 1 / span 1; /* The first item takes the first row */    
+    grid-column: 1 / span 2; /* And spans across both columns, forming the top of the pinwheel shape */    
+}    
+    
+.project:nth-child(2),    
+.project:nth-child(3) {    
+    grid-row: 2 / span 1; /* The second and third items take the second row */    
+}    
+    
+.project:nth-child(2) {    
+    grid-column: 1 / span 1; /* The second item takes the first column */    
+}    
+    
+.project:nth-child(3) {    
+    grid-column: 2 / span 1; /* The third item takes the second column */    
+}    
+    
+.project {    
+    border: 1px solid #b01428; /* Use a standard hex color value */    
+    padding: 10px;    
+    text-align: center;    
+    /* margin-bottom is no longer needed, as the Grid layout handles spacing automatically */    
 }
-
-.hero img {
-    max-width: 50%;
-    border-radius: 10px; /* Consistent rounded corners for images */
-}
-
-/* Button styling */
-.button-link, button {
-    padding: 10px 20px;
-    background-color: #0078D7; /* Button background color */
-    color: white; /* Button text color */
-    text-align: center;
-    text-decoration: none;
-    border-radius: 4px; /* Rounded corners */
-    font-size: 16px; /* Button text size */
-    cursor: pointer; /* Cursor appears as pointer to indicate it's clickable */
-    display: inline-block;
-    border: none;
-    transition: background-color 0.3s; /* Smooth background transition on hover */
-}
-
-.button-link:hover, button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-}
-
-/* Product List Styling */
-.product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.product-item {
-    width: 100%; /* Adjust based on screen size */
-    max-width: 300px; /* Maximum width */
-    margin: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.product-item img {
-    width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Footer styling */
-footer {
-    background: linear-gradient(145deg, #ef6c00, #f57c00); /* Similar gradient as header but reversed */
-    padding: 20px;
-    text-align: center;
-    color: #ffffff; /* White text for visibility */
+.logo img {
+    height: 50px; /* 设置 Logo 的高度 */
+    width: auto;  /* 宽度自动调整以保持比例 */
+    margin-right: 15px; /* 保持与导航项的间距 */
 }

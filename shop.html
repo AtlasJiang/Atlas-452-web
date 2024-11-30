@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .button {
+            background-color: #4CAF50; /* Green background */
+            border: none; /* Remove border */
+            color: white; /* White text */
+            padding: 10px 20px; /* Padding */
+            text-align: center; /* Centered text */
+            text-decoration: none; /* No underline */
+            display: inline-block; /* Inline-block display */
+            font-size: 16px; /* Font size */
+            margin: 4px 2px; /* Margin */
+            cursor: pointer; /* Hand cursor on hover */
+        }
+        .remove-course, .clear-cart, .checkout {
+            background-color: #f44336; /* Red background for remove and clear actions */
+        }
+        .cart-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<script src="script.js" defer></script>
+<body>
+
+<!-- Navigation bar -->
+<nav class="nav-bar">
+    <div class="logo">
+        <img src="logo.jpg" alt="Site Logo">
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
+        <li><a href="projects.html">Projects</a></li>
+    </ul>
+    <div class="logout-container">
+        <button id="logoutButton" class="button">Logout</button>
+    </div>
+</nav>
+
+<!-- Page name -->
+<div class="page-name">
+    <h1>Shop</h1>
+</div>
+
+<!-- Course sections -->
+<section class="course-section">
+    <!-- Course 1 -->
+    <div class="course" data-course-id="Certificate III in Business Administration and Management (BSB30415)">
+        <h2>Certificate III in Business Administration and Management (BSB30415)</h2>
+        <p>Price: $15</p>
+        <input type="text" placeholder="Enter quantity">
+        <button class="button add-course">Add to Cart</button>
+        <button class="remove-course button">Remove</button>
+    </div>
+    <div class="course" data-course-id="Diploma of Information Technology (IT) Support (ICT50118)">
+        <h2>Diploma of Information Technology (IT) Support (ICT50118)</h2>
+        <p>Price: $20</p>
+        <input type="text" placeholder="Enter quantity">
+        <button class="button add-course">Add to Cart</button>
+        <button class="remove-course button">Remove</button>
+    </div>
+    <div class="course" data-course-id="Advanced Diploma of Project Management (BSB60820)">
+        <h2>Advanced Diploma of Project Management (BSB60820)</h2>
+        <p>Price: $25</p>
+        <input type="text" placeholder="Enter quantity">
+        <button class="button add-course">Add to Cart</button>
+        <button class="remove-course button">Remove</button>
+    </div>
+    <div class="course" data-course-id="Certificate IV in Hospitality Management (SIT40416)">
+        <h2>Certificate IV in Hospitality Management (SIT40416)</h2>
+        <p>Price: $30</p>
+        <input type="text" placeholder="Enter quantity">
+        <button class="button add-course">Add to Cart</button>
+        <button class="remove-course button">Remove</button>
+    </div>
+    <div class="course" data-course-id="Diploma of Graphic Design and Digital Media (CUA50720)">
+        <h2>Diploma of Graphic Design and Digital Media (CUA50720)</h2>
+        <p>Price: $35</p>
+        <input type="text" placeholder="Enter quantity">
+        <button class="button add-course">Add to Cart</button>
+        <button class="remove-course button">Remove</button>
+    </div>
+</section>
+
+<!-- Total price section -->
+<section class="total-price-section">
+    <h2>Total Price for All Courses: $0</h2>
+    <button class="clear-cart button">Clear Cart</button>
+    <button class="checkout button">Checkout</button>
+</section>
+
+<!-- Cart items list -->
+<section class="cart-items-list">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2024 Atlas.</p>
+</footer>
+
+</body>
+</html>
