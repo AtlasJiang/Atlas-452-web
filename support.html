@@ -33,7 +33,7 @@
         .product-item p {
             margin-top: 10px;
         }
- 
+
         /* 箭头样式 */
         .product-item:not(:last-child)::after {
             content: '';
@@ -47,12 +47,12 @@
             border-top: 15px solid transparent; /* 箭头顶部透明 */
             border-bottom: 15px solid transparent; /* 箭头底部透明 */
         }
- 
+
         /* 可选：调整箭头颜色或样式 */
         /* .product-item:not(:last-child)::after {
             border-left-color: #ff0000; /* 例如，将箭头颜色改为红色 */
         } */
- 
+
         /* 响应式设计调整（可选） */
         @media (max-width: 768px) {
             .product-item {
@@ -80,12 +80,6 @@
     </header>
     <img src="ai.png" alt="AI Image" style="width: 100%;"> <!-- Full-width banner image -->
     <main>
-        <h1>Support</h1>
-        <p>Get all the help you need with our products. Contact us or find online resources below.</p>
-        <ul>
-            <li><a href="FAQ.html">FAQs</a></li>
-            <li><a href="contact.html">Contact Support</a></li>
-        </ul>
         <!-- 品字形布局开始 -->
         <div class="product-grid">
             <div class="product-item">
@@ -102,7 +96,21 @@
             </div>
         </div>
         <!-- 品字形布局结束 -->
+        
+        <!-- 新增的流程图 -->
+        <img src="452flowchart.jpg" alt="Support Process Flowchart" style="width: 100%; margin-top: 20px;">
     </main>
+    
+    <!-- 支持信息现在位于底部 -->
+    <section id="support-info">
+        <h1>Support</h1>
+        <p>Get all the help you need with our products. Contact us or find online resources below.</p>
+        <ul>
+            <li><a href="FAQ.html">FAQs</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+        </ul>
+    </section>
+
     <footer>
         <p>32 Smith Street, Sunnyvale, NSW 2030 Australia</p>
         <p>Phone: +61 2 8888 8888</p>
